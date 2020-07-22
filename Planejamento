@@ -1,0 +1,30 @@
+Objetivo:
+ - Criar uma calculadora
+
+Funcionalidades:
+ - Menu com opção de escolha
+ - Interação com o usuário via input
+ - Calculo da operação
+
+
+Menu:
+ - Printar opções para o usuário
+ - Ler opção do usuário
+ - Validar a opção do usuário
+ - Printar menu novamente caso a opção seja inválida
+
+
+Input:
+ - Printar mensagem para que o usuário insira o 1º número
+ - Ler input do usuário
+ - Validar se o input é válido
+ - Printar mensagem de erro, caso input não seja válido
+ - Printar msg de novo
+ - Repetir pro 2º numero
+
+
+Calculo:
+ - Identificar operação
+ - Fazer a operação
+ - Printar resultado
+ - Sair do programa
