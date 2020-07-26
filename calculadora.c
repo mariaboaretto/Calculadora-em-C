@@ -4,18 +4,28 @@
 
 int main()
 {
-    int op;
+    int firstNumber, secondNumber;
+    char op[10];
+    int operacao;
+    
     do
     {
         //Printando opções p/ user e lendo o input   
         printf("\n\n");
         printf("Escolha uma das operações abaixo:\n1. Soma\n2. Subtração\n3. Divisão\n4. Multiplicação\n\n");
         printf("Insira o número correspondente à operação desejada: ");
-        scanf("%d", &op);
-        switch (op)
+        scanf("%s", &op);
+
+        operacao = atoi(op);        
+
+        switch (operacao)
         {
         case 1:
-            printf("aeee\n");
+            printf("Insira o primeiro número: ");
+            scanf("%d", firstNumber);
+            printf("Insira o primeiro número: ");
+            scanf("%d", secondNumber);
+            printf("O resultado é: %d", firstNumber + secondNumber);
             break;
         case 2:
             printf("aeee\n");
@@ -29,15 +39,12 @@ int main()
     
         default:
             //Se a operação for inválida
-            //Entrando em loop infinito quando op =! int. Verificar.
             printf("\nOperação inválida. Insira apenas números inteiros de 1 a 4.\n");
             break;
         }
 
-    } while (op != 1 && op != 2 && op != 3 && op != 4);
+    } while (operacao > 4 || operacao < 1);
     
-    
-    //Se o input for inválido
     
     return 0;
 }
