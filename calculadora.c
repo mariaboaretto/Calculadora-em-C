@@ -2,50 +2,73 @@
 #include <string.h>
 #include <stdlib.h>
 
-int main()
+int opMenu()
 {
-    int firstNumber, secondNumber;
     char op[10];
     int operacao;
-    
+
     do
     {
-        //Printando opções p/ user e lendo o input   
-        printf("\n\n");
-        printf("Escolha uma das operações abaixo:\n1. Soma\n2. Subtração\n3. Divisão\n4. Multiplicação\n\n");
+        //Printando opções p/ user e lendo o input
+        printf("\n\nEscolha uma das operações abaixo:\n\n[1] Soma\n[2] Subtração\n[3] Divisão\n[4] Multiplicação\n\n");
         printf("Insira o número correspondente à operação desejada: ");
         scanf("%s", &op);
 
-        operacao = atoi(op);        
+        operacao = atoi(op);
 
-        switch (operacao)
+        if (operacao < 1 || operacao > 4)
         {
-        case 1:
-            printf("Insira o primeiro número: ");
-            scanf("%d", firstNumber);
-            printf("Insira o primeiro número: ");
-            scanf("%d", secondNumber);
-            printf("O resultado é: %d", firstNumber + secondNumber);
-            break;
-        case 2:
-            printf("aeee\n");
-            break;
-        case 3:
-            printf("aeee\n");
-            break;
-        case 4:
-            printf("aeee\n");
-            break;
-    
-        default:
             //Se a operação for inválida
             printf("\nOperação inválida. Insira apenas números inteiros de 1 a 4.\n");
-            break;
         }
 
     } while (operacao > 4 || operacao < 1);
-    
-    
-    return 0;
+
+    return operacao;
 }
 
+void numberInput(int *a, int *b)
+{
+    printf("\nInsira o primeiro número: ");
+    scanf("%d", a);
+    printf("\nInsira o segundo número: ");
+    scanf("%d", b);
+}
+
+void calc(int op, int fNum, int sNum)
+{
+    int result;
+
+    switch (op)
+    {
+    case 1:
+        result = fNum + sNum;
+        break;
+    case 2:
+        result = fNum - sNum;
+        break;
+    case 3:
+        result = fNum / sNum;
+        break;
+    case 4:
+        result = fNum * sNum;
+        break;
+
+    default:
+        break;
+    }
+
+    printf("\nO resultado é: %d\n", result);
+}
+
+int main()
+{
+    int operacao;
+    int firstNum, secondNum;
+
+    operacao = opMenu();
+    numberInput(&firstNum, &secondNum);
+    calc(operacao, firstNum, secondNum);
+
+    return 0;
+}
