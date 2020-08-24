@@ -6,6 +6,8 @@ int opMenu()
 {
     char op[10];
     int operacao;
+    int lines;
+    int column;
 
     do
     {

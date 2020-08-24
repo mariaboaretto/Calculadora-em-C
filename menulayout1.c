@@ -2,29 +2,31 @@
 /*
 
 ********************************************************
-|         Escolha uma das operações abaixo:            |
+            Escolha uma das operações abaixo                       56 + 24 esp em branco (12 de cada lado)
 ********************************************************
-| [1] Soma                                             |
-| [2] Subtração                                        |
-| [3] Divisão                                          |
-| [4] Multiplicação                                    |
+ [1] Soma                                             
+ [2] Subtração                                        
+ [3] Divisão                                          
+ [4] Multiplicação                                    
 ********************************************************
-| Insira o número correspondente à operação desejada: 8|       larg min: 54 + espaço barr vert (55)
+          Insira o número da operação desejada:                 37 caracteres (19 esp em branco)
 ********************************************************       linhas: 10
 
 linhas asterisco: 1, 3, 8, 10
 linhas barra vertical: 2, 4, 5, 6, 7, 9
 
 *******************************
-| Insira o primeiro número: 7 |
+ Insira o primeiro número:
 *******************************
 
 *******************************
-| Insira o segundo número: 7  |
+ Insira o segundo número:
 *******************************
 
 ********************
-| O resultado é: x |
+ O resultado é: x 
 ********************
+
+
 
 */
