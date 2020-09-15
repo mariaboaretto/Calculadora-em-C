@@ -6,12 +6,11 @@ int opMenu()
 {
     char op[10];
     int operacao;
-    int lines;
-    int column;
+    int lines = 10;
+    int column = 56;
 
     do
     {
-        //Printando opções p/ user e lendo o input
         printf("\n\nEscolha uma das operações abaixo:\n\n[1] Soma\n[2] Subtração\n[3] Divisão\n[4] Multiplicação\n\n");
         printf("Insira o número correspondente à operação desejada: ");
         scanf("%s", &op);
@@ -20,7 +19,7 @@ int opMenu()
 
         if (operacao < 1 || operacao > 4)
         {
-            //Se a operação for inválida
+            //Se a operação for inválida.
             printf("\nOperação inválida. Insira apenas números inteiros de 1 a 4.\n");
         }
 
