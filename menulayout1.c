@@ -10,7 +10,7 @@
  [4] Multiplicação                                    
 ********************************************************
           Insira o número da operação desejada:                 37 caracteres (19 esp em branco)
-********************************************************       linhas: 10
+
 
 linhas asterisco: 1, 3, 8, 10
 linhas barra vertical: 2, 4, 5, 6, 7, 9
