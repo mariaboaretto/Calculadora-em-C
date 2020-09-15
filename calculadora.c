@@ -19,7 +19,7 @@ int opMenu()
 
         if (operacao < 1 || operacao > 4)
         {
-            //Se a operação for inválida.
+            //Se a operação for inválida
             printf("\nOperação inválida. Insira apenas números inteiros de 1 a 4.\n");
         }
 
