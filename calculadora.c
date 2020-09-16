@@ -2,28 +2,81 @@
 #include <string.h>
 #include <stdlib.h>
 
+void drawMenuHeader()
+{
+    int lines = 3;
+    int columns = 56;
+
+    for (int i = 1; i <= lines; i++)
+    {
+        for (int j = 1; j < columns; j++)
+        {
+            //Se for primeira e terceira linha
+            if (i == 1 || i == 3)
+            {
+                if (j >= 1 || j <= columns)
+                {
+                    printf("*");
+                }
+            }
+            else
+            {
+                if (j == 13)
+                {
+                    printf("Escolha uma das operações abaixo");
+                }
+                else
+                {
+                    printf(" ");
+                }
+            }
+        }
+        printf("\n");
+    }
+}
+
 int opMenu()
 {
     char op[10];
     int operacao;
-    int lines = 10;
-    int column = 56;
+    int lines = 2;
+    int columns = 56;
 
-    do
+    printf(" [1] Soma\n [2] Subtração\n [3] Divisão\n [4] Multiplicação\n");
+
+    for (int i = 1; i <= lines; i++)
     {
-        printf("\n\nEscolha uma das operações abaixo:\n\n[1] Soma\n[2] Subtração\n[3] Divisão\n[4] Multiplicação\n\n");
-        printf("Insira o número correspondente à operação desejada: ");
-        scanf("%s", &op);
-
-        operacao = atoi(op);
-
-        if (operacao < 1 || operacao > 4)
+        for (int j = 1; j <= columns; j++)
         {
-            //Se a operação for inválida
-            printf("\nOperação inválida. Insira apenas números inteiros de 1 a 4.\n");
+            if (i == 1)
+            {
+                if (j >= 1 || j <= columns)
+                {
+                    printf("*");
+                }
+            }
+            else
+            {
+                if (j == 11)
+                {
+                    printf("Insira o número da operação desejada: ");
+                    scanf("%s", &op);
+                    operacao = atoi(op);
+                }
+                else
+                {
+                    printf(" ");
+                }
+            }
         }
+        printf("\n");
+    }
 
-    } while (operacao > 4 || operacao < 1);
+    if (operacao < 1 || operacao > 4)
+    {
+        //Se a operação for inválida
+        printf("\nOperação inválida. Insira apenas números inteiros de 1 a 4.\n");
+    }
 
     return operacao;
 }
@@ -67,7 +120,13 @@ int main()
     int operacao;
     int firstNum, secondNum;
 
-    operacao = opMenu();
+    do
+    {
+        drawMenuHeader();
+        operacao = opMenu();
+
+    } while (operacao < 1 || operacao > 4);
+
     numberInput(&firstNum, &secondNum);
     calc(operacao, firstNum, secondNum);
 
